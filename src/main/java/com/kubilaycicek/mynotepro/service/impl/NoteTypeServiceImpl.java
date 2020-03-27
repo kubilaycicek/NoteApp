@@ -1,9 +1,9 @@
 package com.kubilaycicek.mynotepro.service.impl;
 
-import com.kubilaycicek.mynotepro.entity.Note;
+import com.kubilaycicek.mynotepro.entity.NoteType;
 import com.kubilaycicek.mynotepro.repository.NoteTypeRepository;
-import com.kubilaycicek.mynotepro.response.NoteListResponse;
-import com.kubilaycicek.mynotepro.response.NoteResponse;
+import com.kubilaycicek.mynotepro.response.NoteTypeListResponse;
+import com.kubilaycicek.mynotepro.response.NoteTypeResponse;
 import com.kubilaycicek.mynotepro.service.NoteTypeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,27 +14,34 @@ public class NoteTypeServiceImpl implements NoteTypeService {
     private final NoteTypeRepository noteTypeRepository;
 
     @Override
-    public NoteResponse addNoteType(Note note) {
-        return null;
+    public NoteTypeResponse addNoteType(NoteType noteType) {
+        return new NoteTypeResponse(noteTypeRepository.save(noteType));
     }
 
     @Override
-    public NoteResponse updateNoteType(Note note) {
-        return null;
+    public NoteTypeResponse updateNoteType(NoteType noteType) {
+        NoteType noteTypeDb = noteTypeRepository.findFirstById(noteType.getId());
+        if (noteTypeDb != null) {
+            noteTypeDb.setTitle(noteType.getTitle());
+            noteTypeDb.setDescription(noteType.getDescription());
+            return new NoteTypeResponse(noteTypeDb);
+        } else {
+            throw new IllegalArgumentException("Note does not exist !");
+        }
     }
 
     @Override
-    public NoteResponse getNoteType(String id) {
-        return null;
+    public NoteTypeResponse getNoteType(String id) {
+        return new NoteTypeResponse(noteTypeRepository.findFirstById(id));
     }
 
     @Override
-    public NoteListResponse getNoteTypes(Note note) {
-        return null;
+    public NoteTypeListResponse getNoteTypes() {
+        return new NoteTypeListResponse(noteTypeRepository.findAll());
     }
 
     @Override
-    public void removeNoteType(Note note) {
-
+    public void removeNoteType(String id) {
+        noteTypeRepository.deleteById(id);
     }
 }

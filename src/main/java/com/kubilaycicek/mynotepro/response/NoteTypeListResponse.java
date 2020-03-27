@@ -1,6 +1,5 @@
 package com.kubilaycicek.mynotepro.response;
 
-import com.kubilaycicek.mynotepro.dto.NoteTypeDto;
 import com.kubilaycicek.mynotepro.entity.NoteType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,5 +11,5 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NoteTypeListResponse {
-    List<NoteTypeDto> noteTypeDtoList;
+    List<NoteType> noteTypeList;
 }

@@ -1,13 +1,13 @@
 package com.kubilaycicek.mynotepro.service;
 
-import com.kubilaycicek.mynotepro.entity.Note;
-import com.kubilaycicek.mynotepro.response.NoteListResponse;
-import com.kubilaycicek.mynotepro.response.NoteResponse;
+import com.kubilaycicek.mynotepro.entity.NoteType;
+import com.kubilaycicek.mynotepro.response.NoteTypeListResponse;
+import com.kubilaycicek.mynotepro.response.NoteTypeResponse;
 
 public interface NoteTypeService {
-    NoteResponse addNoteType(Note note);
-    NoteResponse updateNoteType(Note note);
-    NoteResponse getNoteType(String id);
-    NoteListResponse getNoteTypes(Note note);
-    void removeNoteType(Note note);
+    NoteTypeResponse addNoteType(NoteType noteType);
+    NoteTypeResponse updateNoteType(NoteType noteType);
+    NoteTypeResponse getNoteType(String id);
+    NoteTypeListResponse getNoteTypes();
+    void removeNoteType(String id);
 }

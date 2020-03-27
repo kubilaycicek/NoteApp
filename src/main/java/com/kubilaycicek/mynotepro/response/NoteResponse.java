@@ -1,6 +1,6 @@
 package com.kubilaycicek.mynotepro.response;
 
-import com.kubilaycicek.mynotepro.dto.NoteDto;
+import com.kubilaycicek.mynotepro.entity.Note;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NoteResponse {
-    NoteDto noteDto;
+    Note note;
 }

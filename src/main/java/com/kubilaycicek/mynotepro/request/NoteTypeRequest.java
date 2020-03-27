@@ -1,6 +1,6 @@
 package com.kubilaycicek.mynotepro.request;
 
-import com.kubilaycicek.mynotepro.dto.NoteTypeDto;
+import com.kubilaycicek.mynotepro.entity.NoteType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NoteTypeRequest {
-    private NoteTypeDto noteTypeDto;
+    private NoteType noteType;
 }
