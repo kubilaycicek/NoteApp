@@ -6,9 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @Document(collection = "Notes")
-public class Note {
-    @Id
-    private String id;
+public class Note extends BaseEntity {
     private String title;
     private String content;
     private NoteType noteType;
