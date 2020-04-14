@@ -20,12 +20,12 @@ public class NoteTypeRestController {
 
 
     @PostMapping("/")
-    public ResponseEntity<NoteTypeResponse> addNote(NoteTypeRequest noteTypeRequest) {
+    public ResponseEntity<NoteTypeResponse> addNote(@RequestBody NoteTypeRequest noteTypeRequest) {
         return ResponseEntity.ok(noteTypeService.addNoteType(noteTypeRequest.getNoteType()));
     }
 
     @PutMapping("/")
-    public ResponseEntity<NoteTypeResponse> updateNote(NoteTypeRequest noteTypeRequest) {
+    public ResponseEntity<NoteTypeResponse> updateNote(@RequestBody NoteTypeRequest noteTypeRequest) {
         return ResponseEntity.ok(noteTypeService.updateNoteType(noteTypeRequest.getNoteType()));
     }
 

@@ -16,12 +16,12 @@ public class NoteRestController {
     private final NoteService noteService;
 
     @PostMapping("/")
-    public ResponseEntity<NoteResponse> addNote(NoteRequest noteRequest) {
+    public ResponseEntity<NoteResponse> addNote(@RequestBody NoteRequest noteRequest) {
         return ResponseEntity.ok(noteService.addNote(noteRequest.getNote()));
     }
 
     @PutMapping("/")
-    public ResponseEntity<NoteResponse> updateNote(NoteRequest noteRequest) {
+    public ResponseEntity<NoteResponse> updateNote(@RequestBody NoteRequest noteRequest) {
         return ResponseEntity.ok(noteService.updateNote(noteRequest.getNote()));
     }
 
