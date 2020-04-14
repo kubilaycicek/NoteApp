@@ -26,12 +26,12 @@ public class NoteRestController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(String id) {
+    public void delete(@PathVariable String id) {
         noteService.removeNote(id);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<NoteResponse> getNote(String id) {
+    public ResponseEntity<NoteResponse> getNote(@PathVariable String id) {
         return ResponseEntity.ok(noteService.getNote(id));
     }
 
