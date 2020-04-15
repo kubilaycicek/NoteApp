@@ -19,22 +19,22 @@ public class NoteTypeRestController {
     private final NoteTypeService noteTypeService;
 
     @PostMapping("/")
-    public ResponseEntity<NoteTypeResponse> addNote(@RequestBody NoteTypeRequest noteTypeRequest) {
+    public ResponseEntity<NoteTypeResponse> addNoteType(@RequestBody NoteTypeRequest noteTypeRequest) {
         return ResponseEntity.ok(noteTypeService.addNoteType(noteTypeRequest.getNoteType()));
     }
 
     @PutMapping("/")
-    public ResponseEntity<NoteTypeResponse> updateNote(@RequestBody NoteTypeRequest noteTypeRequest) {
+    public ResponseEntity<NoteTypeResponse> updateNoteType(@RequestBody NoteTypeRequest noteTypeRequest) {
         return ResponseEntity.ok(noteTypeService.updateNoteType(noteTypeRequest.getNoteType()));
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable String id) {
+    public void deleteNoteType(@PathVariable String id) {
         noteTypeService.removeNoteType(id);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<NoteTypeResponse> getNote(@PathVariable String id) {
+    public ResponseEntity<NoteTypeResponse> getNoteType(@PathVariable String id) {
         return ResponseEntity.ok(noteTypeService.getNoteType(id));
     }
 

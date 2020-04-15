@@ -26,7 +26,7 @@ public class NoteRestController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable String id) {
+    public void deleteNoteType(@PathVariable String id) {
         noteService.removeNote(id);
     }
 
