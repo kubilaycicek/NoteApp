@@ -12,15 +12,15 @@ This is a spring boot application.API for notes.
 ## Notes
 | Route  | HTTP Verb  |POST body   |Description   |
 |---|---|---|---|
-| /api/v1/notes/list  |GET   |  Empty | List All Notes    
-| /api/v1/notes/  |POST   | "note": { "content": "string", "id": "string", "noteType": { "description": "string", "id": "string", "title": "string" }, "title": "string" }  | Create a new note  |
-| /api/v1/notes/  | PUT  | "note": { "content": "string", "id": "string", "noteType": { "description": "string", "id": "string", "title": "string" }, "title": "string" }  | Update a note with new info.   |
-| /api/v1/notes/id  | GET  | Empty  | Update a note with new info.   |
+| /api/v1/notes/list  |`GET`   |  Empty | List All Notes    
+| /api/v1/notes/  |`POST`   | "note": { "content": "string", "id": "string", "noteType": { "description": "string", "id": "string", "title": "string" }, "title": "string" }  | Create a new note  |
+| /api/v1/notes/  | `PUT`  | "note": { "content": "string", "id": "string", "noteType": { "description": "string", "id": "string", "title": "string" }, "title": "string" }  | Update a note with new info.   |
+| /api/v1/notes/id  | `GET`  | Empty  | Update a note with new info.   |
 
 ## Note Type
 | Route  | HTTP Verb  |POST BODY   |Description   |
 |---|---|---|---|
-| /api/v1/note-type/list  |GET   |  Empty | List All Note Type    |
-| /api/v1/note-type/  |POST   |{ "noteType": { "description": "string", "id": "string", "title": "string" } }   | Create a new note type  |
-| /api/v1/note-type/  | PUT  | { "noteType": { "description": "string", "id": "string", "title": "string" } }  | Update a note type with new info.   |
-| /api/v1/note-type/id  | GET  | Empty  | Update a note type with new info.   |
+| /api/v1/note-type/list  |`GET`   |  Empty | List All Note Type    |
+| /api/v1/note-type/  |`POST`   |{ "noteType": { "description": "string", "id": "string", "title": "string" } }   | Create a new note type  |
+| /api/v1/note-type/  | `PUT`  | { "noteType": { "description": "string", "id": "string", "title": "string" } }  | Update a note type with new info.   |
+| /api/v1/note-type/id  | `GET`  | Empty  | Update a note type with new info.   |
