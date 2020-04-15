@@ -1,7 +1,7 @@
 # MyNotePro
+This is a spring boot application.API for notes.
 ![sb-sbdata-mongo-combine](https://user-images.githubusercontent.com/44985849/79386480-dbde4e00-7f72-11ea-816a-45e7257cd082.png)
 
-This is a spring boot application.Service project for notebook.
 ## Using Tools & Technologies 
 * Spring Boot 
 * Mongo Database
@@ -9,7 +9,7 @@ This is a spring boot application.Service project for notebook.
 * Lombok 
 * Java 11
 
-# Notes
+## Notes
 | Route  | HTTP Verb  |POST body   |Description   |
 |---|---|---|---|
 | /api/v1/notes/list  |GET   |  Empty | List All Notes    
@@ -17,7 +17,7 @@ This is a spring boot application.Service project for notebook.
 | /api/v1/notes/  | PUT  | "note": { "content": "string", "id": "string", "noteType": { "description": "string", "id": "string", "title": "string" }, "title": "string" }  | Update a note with new info.   |
 | /api/v1/notes/id  | GET  | Empty  | Update a note with new info.   |
 
-# Note Type
+## Note Type
 | Route  | HTTP Verb  |POST BODY   |Description   |
 |---|---|---|---|
 | /api/v1/note-type/list  |GET   |  Empty | List All Note Type    |
