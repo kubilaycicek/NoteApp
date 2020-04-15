@@ -3,9 +3,11 @@ This is a spring boot application.API for notes.
 ![sb-sbdata-mongo-combine](https://user-images.githubusercontent.com/44985849/79386480-dbde4e00-7f72-11ea-816a-45e7257cd082.png)
 
 ## Using Tools & Technologies 
-* Spring Boot 
+* Spring Boot  2.2.6
+* Spring Boot Actuator
 * Mongo Database
-* Swagger
+* Swagger UI 2.9.2
+* Swagger 2.9.2
 * Lombok 
 * Java 11
 
