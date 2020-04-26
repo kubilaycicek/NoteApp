@@ -32,11 +32,12 @@ This is a spring boot application.API for notes.
 # UI (Web)
 
 ## Note List
-![Ekran Alıntısı](https://user-images.githubusercontent.com/44985849/80319520-4b78f680-8819-11ea-93a1-b6bd3842deeb.PNG)
+![1](https://user-images.githubusercontent.com/44985849/80319943-eecb0b00-881b-11ea-87e5-76a5557f1ace.PNG)
 
 ## New Note
-![2](https://user-images.githubusercontent.com/44985849/80319526-5c296c80-8819-11ea-81e2-1a91a1468139.PNG)
+![2](https://user-images.githubusercontent.com/44985849/80319944-f12d6500-881b-11ea-8786-af81326636a1.PNG)
 
 ## New Note Type
-![3](https://user-images.githubusercontent.com/44985849/80319537-677c9800-8819-11ea-8867-d712198df1e0.PNG)
+![3](https://user-images.githubusercontent.com/44985849/80319947-f38fbf00-881b-11ea-81b0-7b640023702b.PNG)
+
 
