@@ -2,7 +2,7 @@ $(document).ready(function () {
     $.getJSON("http://localhost:8080/api/v1/notes/list", function (result) {
         var text = "";
         result.noteList.forEach(function (item, index) {
-            text += "<div class='col col-md-3 col-sm-6 col-lg-2'><div class='item'><div class='card'><div class='card-body'><h5 class='card-title'>" + item.title + "</h5><h6 class='card-subtitle mb-2 text-muted'>" + item.noteType.title + "</h6><p class='card-text'>" + item.content + "</p><a  type='button' class='card-link  btn btn-outline-success' data-toggle='modal' data-target='#noteDetailModal'>Read</a></div></div></div></div>";
+            text += "<div class='col col-md-3 col-sm-6 col-lg-2'><div class='item'><div class='card'><div class='card-body'><h5 class='card-title'>" + item.title + "</h5><h6 class='card-subtitle mb-2 text-muted'>" + item.noteType.title + "</h6><p class='card-text'>" + item.content + "</p></div></div></div></div>";
         });
         $("#content").html(text);
     });
@@ -26,7 +26,7 @@ function searchNotes() {
     $.getJSON("http://localhost:8080/api/v1/notes/list/" + title, function (result) {
         var text = "";
         result.noteList.forEach(function (item, index) {
-            text += "<div class='col col-md-3 col-sm-6 col-lg-2'><div class='item'><div class='card'><div class='card-body'><h5 class='card-title'>" + item.title + "</h5><h6 class='card-subtitle mb-2 text-muted'>" + item.noteType.title + "</h6><p class='card-text'>" + item.content + "</p><a  type='button' class='card-link  btn btn-outline-success' data-toggle='modal' data-target='#noteDetailModal'>Read</a></div></div></div></div>";
+            text += "<div class='col col-md-3 col-sm-6 col-lg-2'><div class='item'><div class='card'><div class='card-body'><h5 class='card-title'>" + item.title + "</h5><h6 class='card-subtitle mb-2 text-muted'>" + item.noteType.title + "</h6><p class='card-text'>" + item.content + "</p></div></div></div></div>";
         });
         $("#content").html("");
         $("#content").html(text);
@@ -71,7 +71,7 @@ function saveNote() {
         dataType: 'json',
         data: JSON.stringify(requestBody),
         success: function (result) {
-            var text = "<div class='col col-md-3 col-sm-6 col-lg-2'><div class='item'><div class='card'><div class='card-body'><h5 class='card-title'>" + result.note.title + "</h5><h6 class='card-subtitle mb-2 text-muted'>" + result.note.noteType.title + "</h6><p class='card-text'>" + result.note.content + "</p><a  type='button' class='card-link  btn btn-outline-success' data-toggle='modal' data-target='#noteDetailModal'>Read</a></div></div></div></div>";
+            var text = "<div class='col col-md-3 col-sm-6 col-lg-2'><div class='item'><div class='card'><div class='card-body'><h5 class='card-title'>" + result.note.title + "</h5><h6 class='card-subtitle mb-2 text-muted'>" + result.note.noteType.title + "</h6><p class='card-text'>" + result.note.content + "</p></div></div></div></div>";
 
             $("#content").append(text);
             $("#title").val("");
