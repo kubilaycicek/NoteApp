@@ -8,5 +8,4 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class NoteType extends BaseEntity {
     private String title;
     private String description;
-
 }

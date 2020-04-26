@@ -43,6 +43,11 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
+    public NoteListResponse getAllByTitle(String title) {
+        return new NoteListResponse(noteRepository.findAllByTitle(title));
+    }
+
+    @Override
     public void removeNote(String id) {
         noteRepository.deleteById(id);
     }

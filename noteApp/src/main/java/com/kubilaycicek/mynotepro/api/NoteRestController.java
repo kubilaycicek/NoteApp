@@ -6,8 +6,11 @@ import com.kubilaycicek.mynotepro.response.NoteListResponse;
 import com.kubilaycicek.mynotepro.response.NoteResponse;
 import com.kubilaycicek.mynotepro.service.NoteService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.awt.print.Book;
 
 @RequiredArgsConstructor
 @RequestMapping(Mappings.API_PATH + Mappings.NOTE_PATH)
@@ -38,5 +41,9 @@ public class NoteRestController {
     @GetMapping("/list")
     public ResponseEntity<NoteListResponse> getList() {
         return ResponseEntity.ok(noteService.getNotes());
+    }
+    @GetMapping("/list/{title}")
+    public ResponseEntity<NoteListResponse> getAllByTitle(@PathVariable(name = "title") String title) {
+        return ResponseEntity.ok(noteService.getAllByTitle(title));
     }
 }
